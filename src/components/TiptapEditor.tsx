@@ -1,5 +1,5 @@
 import { Component, createSignal, createEffect, onMount, onCleanup } from 'solid-js';
-import { Editor, EditorContent } from '@tiptap/core';
+import { Editor } from '@tiptap/core';
 import { BubbleMenu } from '@tiptap/extension-bubble-menu';
 import { FloatingMenu } from '@tiptap/extension-floating-menu';
 import StarterKit from '@tiptap/starter-kit';
@@ -74,6 +74,12 @@ const TiptapEditor: Component<{
       <div class="editor-section">
         <h3>Editor</h3>
         <div class="tiptap-container">
+          <div ref={(ref) => {
+            if (editor() && ref && !ref.firstChild) {
+              ref.appendChild(editor()!.view.dom);
+            }
+          }} class="tiptap-editor" />
+
           {editor() && (
             <>
               <BubbleMenu editor={editor()!} tippyOptions={{ duration: 100 }}>
@@ -116,8 +122,6 @@ const TiptapEditor: Component<{
               </FloatingMenu>
             </>
           )}
-
-          <EditorContent editor={editor()} class="tiptap-editor" />
         </div>
       </div>
 

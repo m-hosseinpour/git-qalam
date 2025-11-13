@@ -1,0 +1,78 @@
+# Dependencies
+node_modules/
+target/
+
+# Production builds
+/dist
+/dist-electron
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+.apdisk
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Tauri
+**/tauri.conf.json.lock
+
+# Rust
+Cargo.lock
+**/target/
+
+# TypeScript
+*.tsbuildinfo
+*.tsxbuildinfo
+*.jsbuildinfo
+
+# NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+tmp/
+temp/
+.DS_Store?
+._*
+
+# Editor files
+*.tmp
+*.bak
+*.swp
+*~
+
+# System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
